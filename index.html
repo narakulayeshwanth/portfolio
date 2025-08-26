@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Narakula Yeshwanth, a passionate Python Developer and Student.">
+  <title>Narakula Yeshwanth | Python Developer</title>
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/d2b62eb69f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Falling Stars Container -->
+  <div class="stars-container"></div>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="nav-brand">
+        <img src="your-photo.jpg" alt="Narakula Yeshwanth" class="profile-photo">
+        <h1 class="logo"><a href="#home">Yeshwanth</a></h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h2>Hello, I'm <span class="highlight">Narakula Yeshwanth</span></h2>
+          <p class="hero-tagline">Student | Python Developer | AI/ML Enthusiast</p>
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="code-image">
+            <div class="code-window">
+              <div class="window-header">
+                <div class="window-buttons">
+                  <span class="red"></span>
+                  <span class="yellow"></span>
+                  <span class="green"></span>
+                </div>
+                <span class="file-name">yeshwanth.py</span>
+              </div>
+              <div class="code-content">
+                <span class="code-line"><span class="keyword">class</span> <span class="class-name">Developer</span>:</span>
+                <span class="code-line">    <span class="keyword">def</span> <span class="function-name">__init__</span>(<span class="self">self</span>):</span>
+                <span class="code-line">        <span class="self">self</span>.name = <span class="string">"Narakula Yeshwanth"</span></span>
+                <span class="code-line">        <span class="self">self</span>.skills = [<span class="string">"Python"</span>, <span class="string">"Java"</span>, <span class="string">"AI/ML"</span>]</span>
+                <span class="code-line">        <span class="self">self</span>.passion = <span class="string">"Creating amazing projects"</span></span>
+                <span class="code-line"></span>
+                <span class="code-line">    <span class="keyword">def</span> <span class="function-name">create_magic</span>(<span class="self">self</span>):</span>
+                <span class="code-line">        <span class="keyword">return</span> <span class="string">"✨ Amazing Code!"</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>
+            I am a B.Tech student specializing in Computer Science Engineering (AI & ML). I am an aspiring tech professional, skilled in Python, and deeply passionate about continuous learning and solving complex problems. I see myself as a strong communicator and a natural team leader – I thrive in collaborative environments and am driven to contribute to impactful, innovative projects that make a difference.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fab fa-python"></i>
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-java"></i>
+            <span>Java</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-code"></i>
+            <span>C++</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-project-diagram"></i>
+            <span>DSA</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-html5"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database"></i>
+            <span>SQL</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain"></i>
+            <span>AI / ML</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="card-content">
+              <h3>Java GUI Applications</h3>
+              <p>Developed interactive desktop applications during an intensive summer training program. Focused on building user-friendly interfaces and implementing core Java functionalities.</p>
+              <div class="tech-stack">
+                <span>Java</span>
+                <span>Swing</span>
+                <span>AWT</span>
+                <span>OOP</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+      </span>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certs-grid">
+          <div class="cert-card">
+            <h3>Java Maestro: GUI Applications</h3>
+            <p class="cert-issuer">Issued by: Lovely Professional University</p>
+            <p class="cert-date">Earned: Aug 2025</p>
+            <a href="https://i.ibb.co/7x8kDZsV/certificate.jpg" target="_blank" class="btn btn-outline">View Certificate</a>
+          </div>
+          <div class="cert-card">
+            <h3>Object Oriented Programming</h3>
+            <p class="cert-issuer">Issued by: LPU (via Iamneo)</p>
+            <p class="cert-date">Earned: Dec 2024</p>
+            <a href="https://i.ibb.co/0pVKwvJS/https-s3-amazonaws-com-exams-media-2027-Student-certificate-for-CSE202-Updated-12312604neocolab-ai-p.jpg" target="_blank" class="btn btn-outline">View Certificate</a>
+          </div>
+          <div class="cert-card">
+            <h3>Java Programming</h3>
+            <p class="cert-issuer">Issued by: LPU (via Iamneo)</p>
+            <p class="cert-date">Earned: May 2025</p>
+            <a href="https://i.ibb.co/fGT94xY6/https-s3-amazonaws-com-exams-media-Java-Programming-Student-Certificate-Updated-12312604neocolab-ai.jpg" target="_blank" class="btn btn-outline">View Certificate</a>
+          </div>
+          <div class="cert-card">
+            <h3>Data Structures & Algorithms</h3>
+            <p class="cert-issuer">Issued by: LPU (via Iamneo)</p>
+            <p class="cert-date">Earned: Dec 2024</p>
+            <a href="https://i.ibb.co/Ps8H1GXM/https-s3-amazonaws-com-exams-media-2027-Student-S-certificate-for-CSE205-12312604neocolab-ai-page-00.jpg" target="_blank" class="btn btn-outline">View Certificate</a>
+          </div>
+          <div class="cert-card">
+            <h3>Hackathon</h3>
+            <p class="cert-issuer">Issued by: Binary Blitz (via CodingNinjasLPU)</p>
+            <p class="cert-date">Earned: 30 Mar 2024</p>
+            <a href="https://i.ibb.co/4ZfkyzFc/hackathon-certificate.jpg" target="_blank" class="btn btn-outline">View Certificate</a>
+          </div>
+          <div class="cert-card">
+            <h3>Responsive Web Design</h3>
+            <p class="cert-issuer">Issued by: Free Code Camp</p>
+            <p class="cert-date">Earned: 24 oct 2023</p>
+            <a href="https://i.ibb.co/ZpjfLWrt/web.png" target="_blank" class="btn btn-outline">View Certificate</a>
+          </div>
+          <div class="cert-card">
+            <h3>Python Programming</h3>
+            <p class="cert-issuer">Issued by: Scaler</p>
+            <p class="cert-date">Earned: 12 Dec 2023</p>
+            <a href="https://i.ibb.co/rGDGB1GX/mooc-technical.jpg" target="_blank" class="btn btn-outline">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+          <div class="contact-links">
+            <a href="mailto:prasadn329@gmail.com" class="contact-link">
+              <i class="fas fa-envelope"></i> prasadn329@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/narakula-yeshwanth-04b033298" target="_blank" class="contact-link">
+              <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+            <a href="https://github.com/narakulayeshwanth" target="_blank" class="contact-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> Narakula Yeshwanth. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
