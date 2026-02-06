@@ -13,7 +13,7 @@
     --card-bg: var(--light-color);
     --transition: all 0.3s ease;
     --border-radius: 12px;
-    --box-shadow: 0 8极速下载 30px rgba(0, 0, 0, 0.3);
+    --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     --button-shadow: 0 0 20px rgba(126, 111, 255, 0.5);
 }
 
@@ -32,7 +32,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--body-color);
-    background-image: 
+    background-image:
         radial-gradient(circle at 15% 50%, rgba(126, 111, 255, 0.1) 0%, transparent 25%),
         radial-gradient(circle at 85% 30%, rgba(255, 107, 107, 0.1) 0%, transparent 25%),
         radial-gradient(circle at 50% 80%, rgba(90, 220, 235, 0.1) 0%, transparent 25%);
@@ -82,12 +82,15 @@ body {
         transform: translateY(-100px) translateX(0);
         opacity: 0;
     }
+
     10% {
         opacity: 1;
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         transform: translateY(100vh) translateX(100px);
         opacity: 0;
@@ -169,7 +172,7 @@ img {
 .btn-secondary {
     background-color: transparent;
     color: var(--primary-color);
-    border: 2极速下载 solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
@@ -227,7 +230,7 @@ nav {
 
 .profile-photo:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20极速下载 rgba(126, 111, 255, 0.6);
+    box-shadow: 0 0 20px rgba(126, 111, 255, 0.6);
 }
 
 .logo a {
@@ -282,7 +285,7 @@ nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--dark极速下载) 0%, var(--body-color) 100%);
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--body-color) 100%);
     color: var(--white);
     padding-top: 80px;
     position: relative;
@@ -296,7 +299,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
         radial-gradient(circle at 20% 30%, rgba(126, 111, 255, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 80% 70%, rgba(255, 107, 107, 0.2) 0%, transparent 50%);
     z-index: -1;
@@ -304,13 +307,13 @@ nav {
 
 .hero-container {
     display: grid;
-    grid-template-column极速下载: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
     min-height: 80vh;
 }
 
-.hero极速下载 {
+.hero-content {
     text-align: left;
 }
 
@@ -354,12 +357,12 @@ nav {
     padding: 2px;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(126, 111, 255, 0.4);
-    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    transform: none;
     transition: all 0.3s ease;
 }
 
 .code-image:hover {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-5px);
+    transform: translateY(-5px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(126, 111, 255, 0.6);
 }
 
@@ -382,7 +385,7 @@ nav {
 
 .window-buttons {
     display: flex;
-    gap: 0.5极速下载;
+    gap: 0.5rem;
 }
 
 .window-buttons span {
@@ -393,7 +396,7 @@ nav {
 }
 
 .window-buttons .red {
-    background: #ff5极速下载;
+    background: #ff5f56;
 }
 
 .window-buttons .yellow {
@@ -470,11 +473,11 @@ nav {
 
 .skill-item.animate {
     /* Animation state */
-    transform: rotateX(360deg) scale(1.1) translateY(-10px);
+    transform: scale(1.1) translateY(-10px);
 }
 
 .skill-item:hover {
-    transform: translateY(-8px) rotateY(10deg) scale(1.05);
+    transform: translateY(-8px) scale(1.05);
     box-shadow: 0 20px 40px rgba(126, 111, 255, 0.4);
     border-color: rgba(126, 111, 255, 0.3);
 }
@@ -496,22 +499,48 @@ nav {
 }
 
 /* Animation delays for skills */
-.skill-item.animate:nth-child(1) { transition-delay: 0.1s; }
-.skill-item.animate:nth-child(2) { transition-delay: 0.2s; }
-.skill-item.animate:nth-child(3) { transition-delay: 0.3s; }
-.skill-item.animate:nth-child(4) { transition-delay: 0.4s; }
-.skill-item.animate:nth-child(5) { transition-delay: 0.5s; }
-.skill-item.animate:nth-child(6) { transition-delay: 0.6极速下载; }
-.skill-item.animate:nth-child(7) { transition-delay: 0.7s; }
-.skill-item.animate:nth-child(8) { transition-delay: 0.8s; }
+.skill-item.animate:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.skill-item.animate:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.skill-item.animate:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.skill-item.animate:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.skill-item.animate:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.skill-item.animate:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.skill-item.animate:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
+.skill-item.animate:nth-child(8) {
+    transition-delay: 0.8s;
+}
 
 /* Glow effect for skills animation */
 @keyframes skillGlow {
-    0%, 100% { 
+
+    0%,
+    100% {
         box-shadow: var(--box-shadow);
     }
-    50% { 
-        box-shadow: 
+
+    50% {
+        box-shadow:
             0 0 25px rgba(126, 111, 255, 0.4),
             0 0 35px rgba(255, 107, 107, 0.2);
     }
@@ -524,7 +553,7 @@ nav {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
@@ -566,7 +595,7 @@ nav {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
-    border: 1px solid rgba(126, 111, 255, 极速下载);
+    border: 1px solid rgba(126, 111, 255, 0.2);
 }
 
 .card-actions {
@@ -608,11 +637,8 @@ nav {
     border: 2px solid rgba(126, 111, 255, 0.2);
     transform-style: preserve-3d;
     opacity: 1;
-    transform: 
-        rotateY(0deg)
-        scale(1)
-        translateZ(0)
-        translateY(0);
+    transform:
+        rotateY(0deg) scale(1) translateZ(0) translateY(0);
     min-height: 250px;
     display: flex;
     flex-direction: column;
@@ -635,11 +661,8 @@ nav {
 
 .cert-card.animate {
     opacity: 1;
-    transform: 
-        rotateY(360deg)
-        scale(1.1)
-        translateZ(50px)
-        translateY(-20px);
+    transform:
+        scale(1.1) translateZ(50px) translateY(-20px);
 }
 
 .cert-card.animate::before {
@@ -647,11 +670,9 @@ nav {
 }
 
 .cert-card:hover {
-    transform: 
-        rotateY(15deg)
-        translateY(-10px)
-        scale(1.05);
-    box-shadow: 
+    transform:
+        translateY(-10px) scale(1.05);
+    box-shadow:
         0 25px 50px rgba(126, 111, 255, 0.3),
         0 0 30px rgba(126, 111, 255, 0.2);
     border-color: rgba(126, 111, 255, 0.4);
@@ -663,7 +684,8 @@ nav {
     font-size: 1.3rem;
 }
 
-.cert-issuer, .cert-date {
+.cert-issuer,
+.cert-date {
     color: var(--text-color-light);
     margin-bottom: 0.8rem;
     font-size: 0.9rem;
@@ -675,20 +697,40 @@ nav {
 }
 
 /* Animation delays for cascading effect */
-.cert-card.animate:nth-child(1) { transition-delay: 0.1s; }
-.cert-card.animate:nth-child(2) { transition-delay: 0.2s; }
-.cert-card.animate:nth-child(3) { transition-delay: 0.3s; }
-.cert-card.animate:nth-child(4) { transition-delay: 0.4s; }
-.cert-card.animate:nth-child(5) { transition-delay: 0.5s; }
-.cert-card.animate:nth-child(6) { transition-delay: 0.6s; }
+.cert-card.animate:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.cert-card.animate:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.cert-card.animate:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.cert-card.animate:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.cert-card.animate:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.cert-card.animate:nth-child(6) {
+    transition-delay: 0.6s;
+}
 
 /* Glow effect for animation */
 @keyframes certificateGlow {
-    0%, 100% { 
+
+    0%,
+    100% {
         box-shadow: var(--box-shadow);
     }
-    50% { 
-        box-shadow: 
+
+    50% {
+        box-shadow:
             0 0 30px rgba(126, 111, 255, 0.5),
             0 0 40px rgba(255, 107, 107, 0.3);
     }
@@ -705,7 +747,7 @@ nav {
     margin: 0 auto;
 }
 
-.contact-content > p {
+.contact-content>p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
     color: var(--text-color-light);
@@ -731,7 +773,7 @@ nav {
 }
 
 .contact-link:hover {
-    background-color: rgba极速下载(126, 111, 255, 0.1);
+    background-color: rgba(126, 111, 255, 0.1);
     color: var(--primary-color);
     transform: translateX(5px);
     border-color: rgba(126, 111, 255, 0.3);
@@ -758,6 +800,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -771,16 +814,16 @@ footer {
         gap: 2rem;
         text-align: center;
     }
-    
+
     .hero-content {
         text-align: center;
     }
-    
+
     .code-image {
         transform: none;
         margin: 0 auto;
     }
-    
+
     .code-image:hover {
         transform: translateY(-5px);
     }
@@ -839,24 +882,25 @@ footer {
         display: block;
     }
 
-    .projects-grid, .certs-grid {
+    .projects-grid,
+    .certs-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-link {
         justify-content: center;
     }
-    
+
     .cert-card {
         min-height: 200px;
         padding: 1.5rem;
     }
-    
+
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         gap: 1rem;
     }
-    
+
     .skill-item {
         padding: 1rem;
     }
@@ -866,25 +910,25 @@ footer {
     .code-window {
         width: 300px;
     }
-    
+
     .code-content {
         padding: 1rem;
         font-size: 0.8rem;
     }
-    
+
     .cert-card {
         padding: 1.2rem;
         min-height: 180px;
     }
-    
+
     .cert-card h3 {
         font-size: 1.1rem;
     }
-    
+
     .skill-item i {
         font-size: 2rem;
     }
-    
+
     .skill-item span {
         font-size: 0.9rem;
     }
