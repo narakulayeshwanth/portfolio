@@ -998,3 +998,22 @@ footer {
 .project-link:hover {
   color: #a89bff;
 }
+/* ===== FINAL PROJECT GRID FIX ===== */
+.projects-grid { ... }
+.project-card { ... }
+.project-image { ... }
+
+/* 👇 ADD THIS BELOW */
+.project-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100%;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-actions {
+  margin-top: auto;
+}
