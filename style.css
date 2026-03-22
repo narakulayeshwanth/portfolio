@@ -972,6 +972,28 @@ footer {
   text-decoration: none;
   transition: 0.3s;
 }
+/* ===== FINAL PROJECT GRID FIX ===== */
+
+/* Make project cards side-by-side */
+.projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  gap: 30px !important;
+}
+
+/* Make each card proper block */
+.project-card {
+  width: 100% !important;
+  display: block !important;
+}
+
+/* Fix project image */
+.project-image {
+  width: 100% !important;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
 
 .project-link:hover {
   color: #a89bff;
