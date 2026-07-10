@@ -54,33 +54,6 @@ function createStar(container) {
     });
 }
 
-// Animate certificates with 3D rotation
-function animateCertificates() {
-    const certCards = document.querySelectorAll('.cert-card');
-
-    // Remove animation class first
-    certCards.forEach(card => {
-        card.classList.remove('animate');
-    });
-
-    // Force reflow to reset animation
-    void document.body.offsetHeight;
-
-    // Animate each certificate card with delay
-    certCards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add('animate');
-        }, index * 200);
-    });
-
-    // Remove animation class after completion to allow re-animation
-    setTimeout(() => {
-        certCards.forEach(card => {
-            card.classList.remove('animate');
-        });
-    }, 4000);
-}
-
 // Animate skills with 3D rotation
 function animateSkills() {
     const skillItems = document.querySelectorAll('.skill-item');
@@ -121,10 +94,7 @@ function scrollToSection(sectionId) {
             behavior: 'smooth'
         });
 
-        // Animate sections based on which one we're scrolling to
-        if (sectionId === 'certificates') {
-            setTimeout(animateCertificates, 800);
-        } else if (sectionId === 'skills') {
+        if (sectionId === 'skills') {
             setTimeout(animateSkills, 800);
         }
     }
@@ -194,45 +164,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const sectionsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log('Section in view:', entry.target.id);
-                if (entry.target.id === 'certificates') {
-                    animateCertificates();
-                } else if (entry.target.id === 'skills') {
+                if (entry.target.id === 'skills') {
                     animateSkills();
                 }
             }
         });
     }, observerOptions);
 
-    // Observe both skills and certificates sections
+    // Observe skills section only
     const skillsSection = document.getElementById('skills');
     const certsSection = document.getElementById('certificates');
 
     if (skillsSection) {
         sectionsObserver.observe(skillsSection);
-        console.log('Observing skills section');
-    }
-    if (certsSection) {
-        sectionsObserver.observe(certsSection);
-        console.log('Observing certificates section');
     }
 
     // Animate skills immediately on load if they're visible
     if (skillsSection && isInViewport(skillsSection)) {
-        console.log('Skills visible on load - animating');
         setTimeout(animateSkills, 500);
-    }
-
-    // Animate certificates immediately on load if they're visible
-    if (certsSection && isInViewport(certsSection)) {
-        console.log('Certificates visible on load - animating');
-        setTimeout(animateCertificates, 500);
     }
 
     // Manual animation triggers for testing
     window.animateAll = function () {
         animateSkills();
-        animateCertificates();
     };
 });
 
