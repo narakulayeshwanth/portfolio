@@ -223,3 +223,41 @@ window.checkStars = function () {
         console.log(`Star ${index + 1}:`, star.style.animationDuration, star.style.animationDelay);
     });
 };
+
+// Design Portfolio Lightbox
+(function () {
+    const lightbox = document.getElementById('designLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    if (!lightbox) return;
+
+    // Open lightbox on card click
+    document.querySelectorAll('.design-card').forEach(card => {
+        card.addEventListener('click', function () {
+            const imgSrc = this.dataset.img;
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close on X button
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    // Close on backdrop click
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => { lightboxImg.src = ''; }, 300);
+    }
+})();
