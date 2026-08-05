@@ -1,4 +1,4 @@
-﻿/* style.css */
+/* style.css */
 /* Modern CSS Reset & Base Styles */
 :root {
     --primary-color: #7e6fff;
@@ -1059,7 +1059,8 @@ footer {
 }
 
 .lightbox img {
-    max-width: 90vw;
+    width: 85vw;
+    max-width: 1100px;
     max-height: 88vh;
     border-radius: 12px;
     box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8);
