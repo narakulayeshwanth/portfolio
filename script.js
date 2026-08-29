@@ -139,18 +139,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close mobile menu when a link is clicked
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                const targetId = link.getAttribute('href').substring(1);
+                const href = link.getAttribute('href');
 
                 // Close mobile menu
                 navMenu.classList.remove('active');
                 const icon = hamburger.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
 
-                // Scroll to section with animation
-                scrollToSection(targetId);
+                // If anchor link to a section on page, smooth scroll
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    scrollToSection(targetId);
+                }
             });
         });
     }
